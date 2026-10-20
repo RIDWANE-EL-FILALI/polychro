@@ -156,7 +156,7 @@ class ValidateSchemaHandlerTest {
 
         assertFalse(result.get("valid").asBoolean());
         assertEquals(1, result.get("count").asInt());
-        assertEquals("ERROR", result.get("diagnostics").get(0).get("severity").asText());
+        assertEquals("ERROR", result.get("diagnostics").get(0).get("severity").asString());
     }
 
     @Test

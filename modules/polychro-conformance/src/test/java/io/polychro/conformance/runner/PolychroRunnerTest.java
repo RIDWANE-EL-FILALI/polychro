@@ -13,8 +13,6 @@
  */
 package io.polychro.conformance.runner;
 
-import io.polychro.conformance.runner.PolychroRunner;
-import io.polychro.conformance.runner.SpectralRunner;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

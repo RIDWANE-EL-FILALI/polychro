@@ -142,8 +142,8 @@ class LintHandlerTest {
         JsonNode first = result.get("diagnostics").get(0);
         assertFalse(first.has("code"));
         assertFalse(first.has("path"));
-        assertEquals("INFO", first.get("severity").asText());
-        assertEquals("Info message", first.get("message").asText());
+        assertEquals("INFO", first.get("severity").asString());
+        assertEquals("Info message", first.get("message").asString());
     }
 
     @Test
@@ -155,7 +155,7 @@ class LintHandlerTest {
         JsonNode result = LintHandler.buildResult(diagnostics);
 
         JsonNode first = result.get("diagnostics").get(0);
-        assertEquals("my-rule", first.get("code").asText());
-        assertEquals("$.root", first.get("path").asText());
+        assertEquals("my-rule", first.get("code").asString());
+        assertEquals("$.root", first.get("path").asString());
     }
 }

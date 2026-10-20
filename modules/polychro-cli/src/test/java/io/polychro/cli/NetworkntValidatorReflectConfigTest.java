@@ -41,7 +41,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  *
  * <p>NOTE: reflect-config.json is currently maintained by hand. When networknt is upgraded,
  * update the file to add missing entries (the failing test will tell you exactly which ones).
- * See issue TODO-networknt-reflect-config-generation for a plan to automate this via a
+ * See https://github.com/naftiko/polychro/issues/194 for a plan to automate this via a
  * Maven code-generation step.
  */
 class NetworkntValidatorReflectConfigTest {

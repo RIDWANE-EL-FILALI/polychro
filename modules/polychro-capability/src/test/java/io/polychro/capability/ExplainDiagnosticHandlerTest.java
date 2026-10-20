@@ -40,11 +40,11 @@ class ExplainDiagnosticHandlerTest {
 
         JsonNode result = handler.execute(context);
 
-        assertEquals("missing-field", result.get("code").asText());
+        assertEquals("missing-field", result.get("code").asString());
         assertEquals("A required field is missing from the document.",
-                result.get("explanation").asText());
+                result.get("explanation").asString());
         assertEquals("Add the missing field to the document root.",
-                result.get("suggestion").asText());
+                result.get("suggestion").asString());
     }
 
     @Test
@@ -59,11 +59,11 @@ class ExplainDiagnosticHandlerTest {
 
         JsonNode result = handler.execute(context);
 
-        assertEquals("unknown-rule", result.get("code").asText());
+        assertEquals("unknown-rule", result.get("code").asString());
         assertEquals("No explanation available for code: unknown-rule",
-                result.get("explanation").asText());
+                result.get("explanation").asString());
         assertEquals("Check the Polychro documentation for details.",
-                result.get("suggestion").asText());
+                result.get("suggestion").asString());
     }
 
     @Test
@@ -80,10 +80,10 @@ class ExplainDiagnosticHandlerTest {
 
         JsonNode result = handler.execute(context);
 
-        assertEquals("", result.get("code").asText());
+        assertEquals("", result.get("code").asString());
         assertEquals("No explanation available for code: null",
-                result.get("explanation").asText());
+                result.get("explanation").asString());
         assertEquals("Check the Polychro documentation for details.",
-                result.get("suggestion").asText());
+                result.get("suggestion").asString());
     }
 }
