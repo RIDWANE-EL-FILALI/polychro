@@ -67,8 +67,8 @@ class ListRulesHandlerTest {
 
         assertEquals(2, result.get("count").asInt());
         assertEquals(2, result.get("validators").size());
-        assertEquals("wellformedness", result.get("validators").get(0).get("name").asText());
-        assertEquals("json-schema", result.get("validators").get(1).get("name").asText());
+        assertEquals("wellformedness", result.get("validators").get(0).get("name").asString());
+        assertEquals("json-schema", result.get("validators").get(1).get("name").asString());
     }
 
     @Test
